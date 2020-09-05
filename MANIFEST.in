@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include masar_cheques *.css
+recursive-include masar_cheques *.csv
+recursive-include masar_cheques *.html
+recursive-include masar_cheques *.ico
+recursive-include masar_cheques *.js
+recursive-include masar_cheques *.json
+recursive-include masar_cheques *.md
+recursive-include masar_cheques *.png
+recursive-include masar_cheques *.py
+recursive-include masar_cheques *.svg
+recursive-include masar_cheques *.txt
+recursive-exclude masar_cheques *.pyc
