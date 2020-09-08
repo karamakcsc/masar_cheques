@@ -127,3 +127,13 @@ app_license = "MIT"
 # 	"Task": "masar_cheques.task.get_dashboard_data"
 # }
 
+fixtures = [
+    {"dt": "Custom Field", "filters": [
+        [
+            "name", "in", [
+                "Payment Entry-emad"
+            ]
+        ]
+    ]}
+]
+
