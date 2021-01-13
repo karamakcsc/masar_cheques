@@ -87,6 +87,21 @@ app_license = "MIT"
 #	}
 # }
 
+
+doc_events = {
+ 	"Payment Entry": {
+ 		"on_update": "masar_cheques.overrides.overrides.execute_override",
+		"before_submit": "masar_cheques.custom.payment_entry.payment_entry.p_before_submit"
+	}
+ }
+
+
+
+doctype_js = {
+    "Payment Entry" : "custom/payment_entry/payment_entry.js"
+ }
+
+
 # Scheduled Tasks
 # ---------------
 

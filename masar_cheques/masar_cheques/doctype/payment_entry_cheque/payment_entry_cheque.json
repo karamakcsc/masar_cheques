@@ -1,0 +1,129 @@
+{
+ "creation": "2020-09-26 01:54:24.722785",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cheque_information_section",
+  "cheque_no",
+  "cheque_value_date",
+  "column_break_3",
+  "cheque_amount",
+  "cheque_bank",
+  "accounts_section",
+  "paid_from",
+  "paid_from_account_currency",
+  "column_break_8",
+  "paid_to",
+  "paid_to_account_currency",
+  "cheque_status",
+  "payment_type",
+  "party_type",
+  "party"
+ ],
+ "fields": [
+  {
+   "fieldname": "cheque_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cheque No",
+   "search_index": 1
+  },
+  {
+   "fieldname": "cheque_value_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Cheque Value Date"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Payment Type"
+  },
+  {
+   "fieldname": "paid_from",
+   "fieldtype": "Link",
+   "label": "Account Paid From",
+   "options": "Account"
+  },
+  {
+   "fieldname": "paid_to",
+   "fieldtype": "Link",
+   "label": "Account Paid To",
+   "options": "Account"
+  },
+  {
+   "fieldname": "paid_from_account_currency",
+   "fieldtype": "Link",
+   "label": "Paid From Account Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "paid_to_account_currency",
+   "fieldtype": "Link",
+   "label": "Paid To Account Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Party Type"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Party"
+  },
+  {
+   "fieldname": "cheque_bank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cheque Bank",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "cheque_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cheque Amount"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "cheque_information_section",
+   "fieldtype": "Section Break",
+   "label": "Cheque Information"
+  },
+  {
+   "fieldname": "cheque_status",
+   "fieldtype": "Data",
+   "label": "Cheque Status"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-08 17:06:35.827246",
+ "modified_by": "Administrator",
+ "module": "Masar Cheques",
+ "name": "Payment Entry Cheque",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,39 @@
+{
+ "creation": "2020-10-08 15:53:44.141237",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_type",
+  "cheque"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "Deposit\nCollect\nReturn",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "payment_entry_cheque.cheque_no",
+   "fieldname": "cheque",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cheque",
+   "options": "Payment Entry Cheque"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-08 16:15:22.787643",
+ "modified_by": "Administrator",
+ "module": "Masar Cheques",
+ "name": "Cheque Management Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
