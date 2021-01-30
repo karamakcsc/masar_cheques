@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "naming_series:",
  "creation": "2020-10-08 15:52:43.703192",
  "doctype": "DocType",
@@ -6,10 +7,21 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
-  "bank",
+  "company",
   "posting_date",
+  "column_break_5",
+  "payment_type",
+  "transaction_type",
+  "bank",
+  "account_section",
+  "from_account",
+  "from_account_currency",
+  "column_break_9",
+  "to_account",
+  "to_account_currency",
   "cheques_section",
-  "cheque_lines"
+  "cheque_lines",
+  "amended_from"
  ],
  "fields": [
   {
@@ -46,10 +58,79 @@
    "fieldname": "cheques_section",
    "fieldtype": "Section Break",
    "label": "Cheques"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "Deposit\nCollect\nReturn",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cheque Management",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_account",
+   "fieldtype": "Link",
+   "label": "From Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Select",
+   "label": "Payment Type",
+   "options": "Receive\nPay",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_account",
+   "fieldtype": "Link",
+   "label": "To Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "account_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "from_account_currency",
+   "fieldtype": "Link",
+   "label": "From Account Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "to_account_currency",
+   "fieldtype": "Link",
+   "label": "To Account Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-10-09 19:29:34.714426",
+ "links": [],
+ "modified": "2021-01-30 02:07:51.560022",
  "modified_by": "Administrator",
  "module": "Masar Cheques",
  "name": "Cheque Management",

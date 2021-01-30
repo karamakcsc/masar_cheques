@@ -1,4 +1,6 @@
 {
+ "actions": [],
+ "autoname": "format:{party}-{cheque_no}",
  "creation": "2020-09-26 01:54:24.722785",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -26,8 +28,7 @@
    "fieldname": "cheque_no",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Cheque No",
-   "search_index": 1
+   "label": "Cheque No"
   },
   {
    "fieldname": "cheque_value_date",
@@ -114,8 +115,10 @@
    "label": "Cheque Status"
   }
  ],
+ "index_web_pages_for_search": 1,
  "istable": 1,
- "modified": "2020-10-08 17:06:35.827246",
+ "links": [],
+ "modified": "2021-01-24 19:16:52.276329",
  "modified_by": "Administrator",
  "module": "Masar Cheques",
  "name": "Payment Entry Cheque",

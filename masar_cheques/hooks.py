@@ -91,7 +91,10 @@ app_license = "MIT"
 doc_events = {
  	"Payment Entry": {
  		"on_update": "masar_cheques.overrides.overrides.execute_override",
-		"before_submit": "masar_cheques.custom.payment_entry.payment_entry.p_before_submit"
+		"before_submit": "masar_cheques.custom.payment_entry.payment_entry.p_before_submit",
+		"on_submit": "masar_cheques.custom.payment_entry.payment_entry.p_on_submit",
+		"on_cancel": "masar_cheques.custom.payment_entry.payment_entry.p_on_cancel"
+
 	}
  }
 
@@ -146,7 +149,11 @@ fixtures = [
     {"dt": "Custom Field", "filters": [
         [
             "name", "in", [
-                "Payment Entry-emad"
+                "Account-post_dated_cheque",
+		"Account-under_collection",
+		"Payment Entry-payment_cheques",
+		"Payment Entry-total_cheques_amount",
+		"Payment Entry-cheques"
             ]
         ]
     ]}

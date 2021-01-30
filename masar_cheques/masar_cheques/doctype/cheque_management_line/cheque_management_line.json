@@ -1,32 +1,113 @@
 {
+ "actions": [],
  "creation": "2020-10-08 15:53:44.141237",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "transaction_type",
-  "cheque"
+  "cheque",
+  "cheque_no",
+  "cheque_value_date",
+  "cheque_bank",
+  "cheque_amount",
+  "party_type",
+  "party",
+  "accounts_section",
+  "paid_from",
+  "paid_from_account_currency",
+  "column_break_10",
+  "paid_to",
+  "paid_to_account_currency"
  ],
  "fields": [
   {
-   "fieldname": "transaction_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Transaction Type",
-   "options": "Deposit\nCollect\nReturn",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "payment_entry_cheque.cheque_no",
    "fieldname": "cheque",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Cheque",
-   "options": "Payment Entry Cheque"
+   "options": "Cheque"
+  },
+  {
+   "fieldname": "cheque_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cheque No"
+  },
+  {
+   "fieldname": "cheque_value_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Cheque Value Date"
+  },
+  {
+   "fetch_from": "cheque.cheque_bank",
+   "fieldname": "cheque_bank",
+   "fieldtype": "Link",
+   "label": "Cheque Bank",
+   "options": "Bank"
+  },
+  {
+   "fetch_from": "cheque.cheque_amount",
+   "fieldname": "cheque_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cheque Amount"
+  },
+  {
+   "fetch_from": "cheque.party_type",
+   "fieldname": "party_type",
+   "fieldtype": "Data",
+   "label": "Party Type"
+  },
+  {
+   "fetch_from": "cheque.party",
+   "fieldname": "party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Party"
+  },
+  {
+   "fieldname": "paid_from",
+   "fieldtype": "Link",
+   "label": "Account Paid From",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_to",
+   "fieldtype": "Link",
+   "label": "Account Paid To",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_to_account_currency",
+   "fieldtype": "Link",
+   "label": "Paid To Account Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_from_account_currency",
+   "fieldtype": "Link",
+   "label": "Paid From Account Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
   }
  ],
+ "index_web_pages_for_search": 1,
  "istable": 1,
- "modified": "2020-10-08 16:15:22.787643",
+ "links": [],
+ "modified": "2021-01-29 23:11:29.409163",
  "modified_by": "Administrator",
  "module": "Masar Cheques",
  "name": "Cheque Management Line",
